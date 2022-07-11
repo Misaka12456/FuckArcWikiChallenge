@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         FuckArcWikiChallenge
-// @namespace    https://misakacastle.moe
-// @version      0.2.2
+// @namespace    https://github.com/Misaka12456
+// @version      0.2.3
 // @description  绕过Arcaea中文Wiki的技术类隐藏页面验证
 // @author       Misaka12456
 // @match        https://wiki.arcaea.cn/*
@@ -13,9 +13,9 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 console.log('FuckArcWikiChallenge Loaded');
 if (document.getElementById('autohidden') != undefined)
 {
-    document.evaluate('/html/body/div[3]/div[3]/div[4]/div/table/tbody/tr/td[1]/div/img',document).iterateNext().src = "https://pic.rmb.bdstatic.com/bjh/3a01f3977ca05bb86115fe2fb144ba21.png";
+    document.evaluate('/html/body/div[3]/div[3]/div[5]/div[1]/table/tbody/tr/td[1]/div/img',document).iterateNext().src = "https://pic.rmb.bdstatic.com/bjh/3a01f3977ca05bb86115fe2fb144ba21.png";
     console.debug('[FuckArcWikiChallenge]Replaced Visibility Icon');
-    $('#autohidden').html('');
+    $('#autohidden').html('<p></p>');
     console.debug('[FuckArcWikiChallenge]Cleared Question Div');
     $('#autoshow').removeAttr('class','test-hidden-2');
     console.debug('[FuckArcWikiChallenge]Showed Confirm Prompt');
